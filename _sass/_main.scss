@@ -147,7 +147,7 @@ pre {
 
 a,
 a:visited {
-  color: $darkBlue;
+  color: $navy;
   text-decoration: none;
 }
 
@@ -409,109 +409,6 @@ th:last-child {
   display: inline-block;
 }
 
-
-.color-swatch-dark-blue {
-  background-color: $darkBlue;
-}
-.color-swatch-blue {
-  background-color: $blue;
-}
-.color-swatch-bright-blue {
-  background-color: $brightBlue;
-}
-.color-swatch-med-blue {
-  background-color: $medBlue;
-}
-.color-swatch-light-blue {
-  background-color: $lightBlue;
-}
-
-.color-swatch-dark-gold {
-  background-color: $darkGold;
-}
-.color-swatch-gold {
-  background-color: $gold;
-}
-.color-swatch-bright-gold {
-  background-color: $brightGold;
-}
-.color-swatch-med-gold {
-  background-color: $medGold;
-}
-.color-swatch-light-gold {
-  background-color: $lightGold;
-}
-
-.color-swatch-dark-green {
-  background-color: $darkGreen;
-}
-.color-swatch-green {
-  background-color: $green;
-}
-.color-swatch-bright-green {
-  background-color: $brightGreen;
-}
-.color-swatch-med-green {
-  background-color: $medGreen;
-}
-.color-swatch-light-green {
-  background-color: $lightGreen;
-}
-.color-swatch-faded-green {
-  background-color: $fadedGreen;
-}
-
-.color-swatch-dark-purple {
-  background-color: $darkPurple;
-}
-.color-swatch-purple {
-  background-color: $purple;
-}
-.color-swatch-bright-purple {
-  background-color: $brightPurple;
-}
-.color-swatch-med-purple {
-  background-color: $medPurple;
-}
-.color-swatch-light-purple {
-  background-color: $lightPurple;
-}
-
-.color-swatch-white {
-  background-color: $white;
-  border-color: $gray-3;
-}
-.color-swatch-gray-1 {
-  background-color: $gray-1;
-}
-.color-swatch-gray-2 {
-  background-color: $gray-2;
-}
-.color-swatch-gray-3 {
-  background-color: $gray-3;
-}
-.color-swatch-gray-4 {
-  background-color: $gray-4;
-}
-.color-swatch-gray-5 {
-  background-color: $gray-5;
-}
-.color-swatch-gray-6 {
-  background-color: $gray-6;
-}
-.color-swatch-gray-7 {
-  background-color: $gray-7;
-}
-.color-swatch-gray-8 {
-  background-color: $gray-8;
-}
-.color-swatch-gray-9 {
-  background-color: $gray-9;
-}
-.color-swatch-gray-10 {
-  background-color: $gray-10;
-}
-
 .illo-download {
   border: 1px solid transparent;
   border-radius: 8px;
@@ -669,8 +566,8 @@ a.btn {
 }
 
 .btn-primary {
-  background: $darkBlue;
-  border-color: $darkBlue;
+  background: $navy;
+  border-color: $navy;
   color: $white;
 
   &:hover {
@@ -681,13 +578,13 @@ a.btn {
 }
 
 .btn-link {
-  color: $darkBlue;
+  color: $navy;
   background: rgba(255,255,255,0);
   border-color: rgba(255,255,255,0);
 
   &:hover {
     background: $gray-1;
-    color: $darkBlue;
+    color: $navy;
   }
 }
 
