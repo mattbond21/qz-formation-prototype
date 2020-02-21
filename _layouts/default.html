@@ -12,9 +12,53 @@
             <img src="{{ site.baseurl }}images/logo/logo.png" class="logo">
           </a>
           <ul class="main-nav">
-            <li class="nav-item home {% if page.title == 'Home' %}nav-active{% endif %}"><a href="{{ site.baseurl }}" class="nav-node">Home</a></li>
-            <li class="nav-item browse {% if page.title == 'Browse' %}nav-active{% endif %}"><a href="{{ site.baseurl }}">Browse</a></li>
-            <li class="nav-item create {% if page.title == 'Create' %}nav-active{% endif %}"><a href="{{ site.baseurl }}">Create</a></li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Home' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-home-on.png" alt="home icon"></div>
+                <div class="nav-name">Home</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}browse" class="nav-node {% if page.title == 'Browse' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-browse.png" alt="browse icon"></div>
+                <div class="nav-name">Browse</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Create' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-create.png" alt="home icon"></div>
+                <div class="nav-name">Create</div>
+              </a>
+            </li>
+          </ul>
+
+
+          <ul class="main-nav">
+            <h5 class="nav-section-header">Collections</h5>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-queue.png" alt="queue icon"></div>
+                <div class="nav-name">Study queue</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Favorites' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-star.png" alt="favorities icon"></div>
+                <div class="nav-name">Favorites</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Made for you' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-recommend.png" alt="recommend icon"></div>
+                <div class="nav-name">Made for you</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Marketplace' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-dollar.png" alt="purchased icon"></div>
+                <div class="nav-name">Marketplace</div>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
