@@ -1,0 +1,32 @@
+
+
+
+.dropdown-menu {
+  padding: 8px 0;
+  margin: -6px 0 0;
+  font-size: 14px;
+}
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 11px 0;
+  overflow: hidden;
+  background-color: $gray-border;
+}
+.dropdown-menu > li > a {
+  padding: 8px 24px;
+  clear: both;
+  line-height: 1.42857143;
+  color: $gray-dark;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: $navy;
+  background-color: $light-navy;
+}
