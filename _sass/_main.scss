@@ -378,7 +378,7 @@ app {
 .tabs {
   border-bottom: 1px solid $gray-border;
   height: 40px;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 
 .tabs > .tab-item {
@@ -410,6 +410,7 @@ app {
   display: flex;
   flex-wrap: row;
   justify-content: space-between;
+  margin-top: 24px;
 }
 
 .card {
@@ -421,7 +422,7 @@ app {
   padding: 24px;
   text-align: left;
   transition: all 200ms cubic-bezier(.02, .01, .47, 1);
-  width: calc((100%/3) - (var(--margin)* 3));
+  width: calc((100%/3) - (var(--margin)* 2));
   min-width: 240px;
   z-index: 1;
   cursor: pointer;
