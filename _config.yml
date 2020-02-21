@@ -8,7 +8,7 @@ sass:
   sass_dir: _sass
 
 # Setup
-title:            Assembly Design Language
-tagline:          'The Quizlet Design System'
-url:              http://assembly.quizlet.design
-baseurl:          /assembly-design-language/
+title:            Quizlet app rethink
+tagline:          'Formation Prototype'
+url:              http://quizlet.github.io/formation-prototype/
+baseurl:          /formation-prototype/

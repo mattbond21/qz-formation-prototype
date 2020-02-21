@@ -5,55 +5,26 @@
 
 <body>
 
-    <div class="header">
-    </div>
-
-    <div class="container main-section">
-      <div class="row">
-        <div class="three-col">
-          <div id="tree-nav-container">
-            <a href="{{ site.baseurl }}">
-              <img src="{{ site.baseurl }}images/logo/quizlet-design-logo.png" class="logo">
-            </a>
-            <ul class="o-list-ui tree-nav {{ include.display }}">
-                <li{% if page.title == 'Overview' %} class="nav-tree-node-active"{% endif %}><a href="{{ site.baseurl }}">Overview</a></li>
-                <li class="nav-tree-node {% if page.section == 'Foundations' %}nav-tree-node-is-open{% endif %}">
-                    <a>Foundations</a>
-                    <ul>{% include foundations-nav.html %}</ul>
-                </li>
-                <li class="nav-tree-node {% if page.section == 'Components' %}nav-tree-node-is-open{% endif %}">
-                    <a>Components</a>
-                    <ul>{% include components-nav.html %}</ul>
-                </li>
-                <li class="nav-tree-node {% if page.section == 'Content' %}nav-tree-node-is-open{% endif %}">
-                    <a>Content</a>
-                    <ul>{% include content-nav.html %}</ul>
-                </li>
-                <li class="nav-tree-node {% if page.section == 'Resources' %}nav-tree-node-is-open{% endif %}">
-                    <a>Resources</a>
-                    <ul>{% include resources-nav.html %}</ul>
-                </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col">
-            {{ content }}
+    <app>
+      <div id="sidebar">
+        <div id="nav-top">
+          <a href="{{ site.baseurl }}">
+            <img src="{{ site.baseurl }}images/logo/logo.png" class="logo">
+          </a>
+          <ul class="main-nav">
+            <li class="nav-item home {% if page.title == 'Home' %}nav-active{% endif %}"><a href="{{ site.baseurl }}" class="nav-node">Home</a></li>
+            <li class="nav-item browse {% if page.title == 'Browse' %}nav-active{% endif %}"><a href="{{ site.baseurl }}">Browse</a></li>
+            <li class="nav-item create {% if page.title == 'Create' %}nav-active{% endif %}"><a href="{{ site.baseurl }}">Create</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+
+      <div id="main">
+        {{ content }}
+      </div>
+    </app>
 
     {% include footer.html %}
-
-    <!-- <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-XXXXXXXXX-1', 'auto');
-      ga('send', 'pageview');
-
-    </script> -->
 
 </body>
 
