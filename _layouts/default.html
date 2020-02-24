@@ -14,13 +14,13 @@
           <ul class="main-nav">
             <li class="nav-item">
               <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Home' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-home-on.png" alt="home icon"></div>
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-home{% if page.title == 'Home' %}-on{% endif %}.png" alt="home icon"></div>
                 <div class="nav-name">Home</div>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ site.baseurl }}browse" class="nav-node {% if page.title == 'Browse' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-browse.png" alt="browse icon"></div>
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-browse{% if page.title == 'Browse' %}-on{% endif %}.png" alt="browse icon"></div>
                 <div class="nav-name">Browse</div>
               </a>
             </li>
@@ -48,8 +48,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Made for you' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-recommend.png" alt="recommend icon"></div>
+              <a href="{{ site.baseurl }}madeforyou" class="nav-node {% if page.title == 'Made for you' %}nav-active{% endif %}">
+                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-recommend{% if page.title == 'Made for you' %}-on{% endif %}.png" alt="recommend icon"></div>
                 <div class="nav-name">Made for you</div>
               </a>
             </li>
@@ -117,7 +117,7 @@
           </div>
           <div class="header-right">
             <div class="buttons">
-              <a class="button button-teal">Upgrade</a>
+              <a class="button button-teal" data-toggle="modal" data-target="#shareModal">Upgrade</a>
 
               <div class="avatar-container">
                 <div class="dropdown">
@@ -141,6 +141,8 @@
 
       </div>
     </app>
+
+    {% include modals.html %}
 
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <script src="{{ site.baseurl }}js/jquery.js"></script>

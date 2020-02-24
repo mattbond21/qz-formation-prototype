@@ -408,16 +408,25 @@ app {
 
 .card-container {
   display: flex;
-  flex-wrap: row;
   justify-content: space-between;
   margin-top: 24px;
+}
+
+.card-container > a:first-child {
+  margin-right: 24px;
+  flex: 0;
+}
+
+.card-container > a:last-child {
+  margin-right: 24px;
+  flex: 1;
 }
 
 .card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,.07);
-  color: $gray-10;
+  color: $gray-black;
   height: 160px;
   padding: 24px;
   text-align: left;
@@ -428,10 +437,22 @@ app {
   cursor: pointer;
 }
 
+.card-cover {
+  height: 260px;
+  width: 295px;
+  padding: 0px;
+}
+
 .card:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,.12);
   transform: translate(0,-3px);
   transition-delay: 0s !important;
+}
+
+.card-top {
+  height: 160px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 .card-image {
@@ -440,6 +461,10 @@ app {
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   background: #f5f5f5;
+}
+
+.card-body {
+  padding: 16px;
 }
 
 .card-body > h4 {
@@ -460,9 +485,23 @@ app {
 }
 
 .card-description {
-  color: #8b939b;
+  color: $gray-med-dark;
   font-size: 14px;
 }
+
+.card-smart-set-1 {
+  background: $teal url('../images/covers/card-smart-set-1.png') center bottom no-repeat;
+  background-size: 295px;
+}
+
+.card-smart-set-2 {
+  background: #FF9180 url('../images/covers/card-smart-set-2.png') center bottom no-repeat;
+  background-size: 295px;
+}
+
+
+
+
 
 /* ==========================================================================
    Buttons
