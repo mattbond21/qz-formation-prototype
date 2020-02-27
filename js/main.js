@@ -30,3 +30,17 @@ $(function() {
         }
     });
 });
+
+
+// $("#card-overlay").mouseover(function() {
+// 		$(this).addClass("visible");
+// 	}, function() {
+// 		$(this).removeClass("visible");
+// 	});
+
+//
+// $('#card-overlay').hover(function(){
+//   $(this).addClass('visible');
+// }, function(){
+//   $(this).removeClass('hidden');
+// });

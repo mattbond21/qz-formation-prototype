@@ -262,8 +262,11 @@ th:last-child {
 
 
 
-/* =================================================
-  Layout and structure */
+
+
+/* ==========================================================================
+   App structure and layout
+   ========================================================================== */
 
 :root {
   --margin: 8px;
@@ -320,15 +323,9 @@ app {
 .content-body {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 484px;
 }
 
-.content-sidebar {
-  display: flex;
-  flex-direction: column;
-  margin-left: 64px;
-  width: 360px;
-}
 
 .nav-top {
   display: flex;
@@ -343,7 +340,47 @@ app {
 
 .nav-logo {
   margin: 8px 0 32px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
+.nav-logo > a {
+  order: 1;
+  flex-grow: 1;
+}
+
+.nav-nightmode {
+  order: 2;
+  flex-grow: 0;
+  height: 24px;
+  width: 24px;
+  background-image: url('../images/icons/icon-20-night-mode.png');
+  background-size: contain;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url('../images/icons/icon-20-night-mode-on.png');
+  }
+}
+
+.nav-notification {
+  order: 3;
+  flex-grow: 0;
+  height: 24px;
+  width: 24px;
+  background-image: url('../images/icons/icon-20-notification.png');
+  background-size: contain;
+  margin-left: 12px;
+  margin-right: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url('../images/icons/icon-20-notification-on.png');
+  }
+}
+
+
 
 .page-header {
   display: flex;
@@ -432,8 +469,9 @@ app {
 
 
 
-
-/* Tabs */
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
 
 .tabs {
   border-bottom: 1px solid $gray-border;
@@ -468,26 +506,11 @@ app {
 
 
 
-/* Cards */
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 24px;
-}
-
-.card-container > a:first-child {
-  margin-right: 24px;
-  flex: 0;
-}
-
-.card-container > a:last-child {
-  margin-right: 24px;
-  flex: 1;
-}
 
 
+/* ==========================================================================
+   Study cards
+   ========================================================================== */
 
 
 .card {
@@ -495,6 +518,7 @@ app {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,.08);
   color: $gray-black;
+  width: 484px;
   height: 128px;
   text-align: left;
   transition: all 200ms cubic-bezier(.02, .01, .47, 1);
@@ -530,7 +554,7 @@ app {
   margin-bottom: 0;
   color: $gray-dark;
   text-overflow: ellipsis;
-  max-width: 316px;
+  max-width: 256px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -609,20 +633,123 @@ app {
 }
 
 
+#card-overlay {
+  background: rgba(255,255,255,0.98);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+  width: 452px;
+  height: 96px;
+}
+
+#card-overlay.visible {
+  visibility: visible;
+}
+
+#card-overlay.hidden {
+  visibility: hidden;
+}
+
+.card-overlay-actions {
+  order: 1;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.card-overlay-actions > img {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.card-overlay-buttons {
+  order: 2;
+  flex-grow: 0;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-overlay-buttons > .button {
+  margin: 0 4px;
+}
 
 
 
+
+
+/* ==========================================================================
+   Smart cards (with posters)
+   ========================================================================== */
+
+.card-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ margin-top: 24px;
+}
+
+.card-container > a:first-child {
+ margin-right: 24px;
+ flex: 0;
+}
+
+.card-container > a:last-child {
+ margin-right: 24px;
+ flex: 1;
+}
+
+.smart-card {
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+  color: $gray-black;
+  transition: all 200ms cubic-bezier(.02, .01, .47, 1);
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.smart-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  transform: translate(0,-3px);
+  transition-delay: 0s !important;
+}
 
 .smart-card-top {
   height: 160px;
-  border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .smart-card-cover {
-  height: 260px;
+  height: 280px;
   width: 295px;
   padding: 0px;
+}
+
+.smart-card-body {
+  padding: 16px;
+  position: relative;
+  clear: both;
+  float: left;
+  overflow: visible;
+}
+
+.smart-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: $gray-black;
+  margin-bottom: 8px;
+}
+
+.smart-card-description {
+  color: $gray-med-dark;
+  font-size: 14px;
 }
 
 .smart-card-set-1 {
@@ -636,8 +763,29 @@ app {
 }
 
 
+/* ==========================================================================
+   Content sidebar
+   ========================================================================== */
 
 
+.content-sidebar {
+ display: flex;
+ flex-direction: column;
+ margin-left: 64px;
+ width: 300px;
+}
+
+.content-sidebar-get-started {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+  margin-bottom: 16px;
+}
+
+.content-sidebar-get-started {
+  display: flex;
+  margin-bottom: 32px;
+}
 
 /* ==========================================================================
    Buttons
