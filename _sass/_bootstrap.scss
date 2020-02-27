@@ -1869,18 +1869,10 @@ button.close {
   outline: 0;
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  -o-transform: translate(0, -25%);
-  transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
+  transform: translate(0, 15%);
   transition: transform 0.3s ease-out;
 }
 .modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 .modal-open .modal {
@@ -1896,7 +1888,7 @@ button.close {
   position: relative;
   background-color: #ffffff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
@@ -1909,7 +1901,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: $gray-10;
+  background-color: $deep-purple;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -1936,10 +1928,10 @@ button.close {
 .modal-footer {
   padding: 16px;
   text-align: right;
-  border-top: 1px solid $gray-4;
-  background: $gray-1;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-top: 1px solid $gray-border;
+  background: $white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .modal-footer .btn + .btn {
   margin-left: 8px;

@@ -6,139 +6,139 @@
 <body>
 
     <app>
-      <div id="sidebar">
-        <div id="nav-top">
-          <a href="{{ site.baseurl }}">
-            <img src="{{ site.baseurl }}images/logo/logo.png" class="logo">
-          </a>
-          <ul class="main-nav">
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Home' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-home{% if page.title == 'Home' %}-on{% endif %}.png" alt="home icon"></div>
-                <div class="nav-name">Home</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}browse" class="nav-node {% if page.title == 'Browse' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-browse{% if page.title == 'Browse' %}-on{% endif %}.png" alt="browse icon"></div>
-                <div class="nav-name">Browse</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Create' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-create.png" alt="home icon"></div>
-                <div class="nav-name">Create</div>
-              </a>
-            </li>
-          </ul>
+      <div class="empty-sidebar">
+        <div id="sidebar">
+          <div class="nav-logo">
+            <a href="{{ site.baseurl }}">
+              <img src="{{ site.baseurl }}images/logo/logo.png" class="logo">
+            </a>
+          </div>
+
+          <div class="nav-top">
+            <ul class="main-nav">
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Home' %}nav-active{% endif %}">
+                  <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-home{% if page.title == 'Home' %}-on{% endif %}.png" alt="home icon"></div>
+                  <div class="nav-name">Home</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}browse" class="nav-node {% if page.title == 'Browse' %}nav-active{% endif %}">
+                  <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-browse{% if page.title == 'Browse' %}-on{% endif %}.png" alt="browse icon"></div>
+                  <div class="nav-name">Browse</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}marketplace" class="nav-node {% if page.title == 'Marketplace' %}nav-active{% endif %}">
+                  <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-dollar{% if page.title == 'Marketplace' %}-on{% endif %}.png" alt="purchased icon"></div>
+                  <div class="nav-name">Marketplace</div>
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Create' %}nav-active{% endif %}">
+                  <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-create.png" alt="home icon"></div>
+                  <div class="nav-name">Create</div>
+                </a>
+              </li> -->
+            </ul>
+
+            <ul class="main-nav">
+              <h5 class="nav-section-header">Collections</h5>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}collections/study-queue" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
+                  <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-queue{% if page.title == 'Study queue' %}-on{% endif %}.png" alt="queue icon"></div>
+                  <div class="nav-name">Study queue</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}collections/favorites" class="nav-node {% if page.title == 'Favorites' %}nav-active{% endif %}">
+                  <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-star{% if page.title == 'Favorites' %}-on{% endif %}.png" alt="favorities icon"></div>
+                  <div class="nav-name">Favorites</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}collections/madeforyou" class="nav-node {% if page.title == 'Made for you' %}nav-active{% endif %}">
+                  <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-recommend{% if page.title == 'Made for you' %}-on{% endif %}.png" alt="recommend icon"></div>
+                  <div class="nav-name">Made for you</div>
+                </a>
+              </li>
+            </ul>
 
 
-          <ul class="main-nav">
-            <h5 class="nav-section-header">Collections</h5>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-queue.png" alt="queue icon"></div>
-                <div class="nav-name">Study queue</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Favorites' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-star.png" alt="favorities icon"></div>
-                <div class="nav-name">Favorites</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}madeforyou" class="nav-node {% if page.title == 'Made for you' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-recommend{% if page.title == 'Made for you' %}-on{% endif %}.png" alt="recommend icon"></div>
-                <div class="nav-name">Made for you</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Marketplace' %}nav-active{% endif %}">
-                <div class="nav-icon"><img src="{{ site.baseurl }}images/icons/icon-dollar.png" alt="purchased icon"></div>
-                <div class="nav-name">Marketplace</div>
-              </a>
-            </li>
-          </ul>
+            <ul class="main-nav">
+              <h5 class="nav-section-header">Folders</h5>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}folders/biology" class="nav-node {% if page.title == 'Biology' %}nav-active{% endif %}">
+                  <div class="nav-name">Biology</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}folders/maths" class="nav-node {% if page.title == 'Maths' %}nav-active{% endif %}">
+                  <div class="nav-name">Maths</div>
+                </a>
+              </li>
+            </ul>
 
 
-          <ul class="main-nav">
-            <h5 class="nav-section-header">Folders</h5>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-name">Folder 1</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-name">Folder 2</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-name">Folder 3</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-name">Folder 4</div>
-              </a>
-            </li>
-          </ul>
+            <ul class="main-nav">
+              <h5 class="nav-section-header">Classes</h5>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}classes/bio1010" class="nav-node {% if page.title == 'BIO1010 - Sem 1, 2020' %}nav-active{% endif %}">
+                  <div class="nav-name">BIO1010 - Sem 1, 2020</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ site.baseurl }}classes/cmns1000" class="nav-node {% if page.title == 'CMNS1000 - Sem 1, 2020' %}nav-active{% endif %}">
+                  <div class="nav-name">CMNS1000 - Sem 1, 2020</div>
+                </a>
+              </li>
+            </ul>
 
+          </div> <!-- .nav-top -->
 
-          <ul class="main-nav">
-            <h5 class="nav-section-header">Classes</h5>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-name">Class 1</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-name">Class 2</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ site.baseurl }}" class="nav-node {% if page.title == 'Study queue' %}nav-active{% endif %}">
-                <div class="nav-name">Class 3</div>
-              </a>
-            </li>
-          </ul>
+          <div class="nav-bottom">
+            <div class="dropup">
+              <div class="dropdown">
+                <a class="dropdown-toggle profile-container" id="profileMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <div class="profile-avatar"></div>
 
+                  <div class="profile-details">
+                    <p class="profile-name">Matt Bond</p>
+                    <p class="profile-email">bond@quizlet.com</p>
+                  </div>
+                  <div class="profile-menu-caret"></div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="profileMenu">
+                  <li><a href="#">View profile</a></li>
+                  <li><a href="#">Study history</a></li>
+                  <li><a href="#">Stats</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Sign out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- .nav-bottom -->
 
-        </div>
-      </div>
+        </div> <!-- #sidebar -->
+      </div> <!-- .empty-sidebar -->
 
       <div id="main">
-        <header class="page-header">
-          <div class="header-left">
-            <h3>{{ page.title }}</h3>
-          </div>
-          <div class="header-right">
-            <div class="buttons">
-              <a class="button button-teal" data-toggle="modal" data-target="#shareModal">Upgrade</a>
-
-              <div class="avatar-container">
-                <div class="dropdown">
-                  <a class="profile-avatar dropdown-toggle" id="profileMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></a>
-                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="profileMenu">
-                    <li><a href="#">View profile</a></li>
-                    <li><a href="#">Study history</a></li>
-                    <li><a href="#">Stats</a></li>
-                    <li><a href="#">Dark theme</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Sign out</a></li>
-                  </ul>
-                </div>
-              </div>
-
+        <div class="main-container">
+          <header class="page-header">
+            <div class="header-left">
+              <h2>{{ page.title }}</h2>
             </div>
-          </div>
-        </header>
+            <div class="header-right">
+              <div class="buttons">
+                <a class="button button-primary" data-toggle="modal" data-target="#createModal">Create set</a>
+              </div>
+            </div>
+          </header>
 
-        {{ content }}
+          {{ content }}
 
+        </div>
       </div>
     </app>
 
