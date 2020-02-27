@@ -443,17 +443,101 @@ app {
 }
 
 .nav-active {
-  background-color: $light-navy;
+  background-color: $gray-xtra-light;
   display: flex;
 
   &:hover {
-      text-decoration: none;
-      background-color: $light-navy;
+    text-decoration: none;
+    background-color: $gray-xtra-light;
   }
 }
 
 .nav-active > .nav-name {
+  color: $gray-dark;
+}
+
+.home > .nav-active {
+  background-color: $light-navy;
+  display: flex;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $light-navy;
+  }
+}
+
+.home > .nav-active > .nav-name {
   color: $dark-navy;
+}
+
+.browse > .nav-active {
+  background-color: $light-teal;
+  display: flex;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $light-teal;
+  }
+}
+
+.browse > .nav-active > .nav-name {
+  color: $dark-teal;
+}
+
+.marketplace > .nav-active {
+  background-color: $light-coral;
+  display: flex;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $light-coral;
+  }
+}
+
+.marketplace > .nav-active > .nav-name {
+  color: $dark-coral;
+}
+
+.study-queue > .nav-active {
+  background-color: $light-green;
+  display: flex;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $light-green;
+  }
+}
+
+.study-queue > .nav-active > .nav-name {
+  color: $dark-green;
+}
+
+.favorites > .nav-active {
+  background-color: $light-yellow;
+  display: flex;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $light-yellow;
+  }
+}
+
+.favorites > .nav-active > .nav-name {
+  color: $dark-yellow;
+}
+
+.made-for-you > .nav-active {
+  background-color: $light-purple;
+  display: flex;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $light-purple;
+  }
+}
+
+.made-for-you > .nav-active > .nav-name {
+  color: $dark-purple;
 }
 
 
@@ -502,9 +586,6 @@ app {
 .tabs > .active.tab-item:hover {
   color: $navy;
 }
-
-
-
 
 
 
@@ -905,9 +986,6 @@ a.button-primary-outline {
   position: relative;
   top: 3px;
 }
-
-
-
 
 
 
