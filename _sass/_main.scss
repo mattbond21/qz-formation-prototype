@@ -3,11 +3,11 @@
    ========================================================================== */
 
 html {
-    color: $gray-ink;
+    color: var(--gray-granite-color);
     font-size: 16px;
     line-height: 1.5;
     font-family: 'Hurme Sans 2', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background: $gray-bg;
+    background: var(--gray-chalk-color);
     text-rendering: optimizeLegibility;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -42,7 +42,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid $gray-border;
+    border-top: 1px solid var(--gray-stone-color);
     margin: 1em 0;
     padding: 0;
 }
@@ -91,7 +91,7 @@ textarea {
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
  font-weight: 600;
- color: $gray-black;
+ color: var(--gray-granite-color);
 }
 
 h1, .h1,
@@ -135,7 +135,7 @@ h5, .h5 {
 
 a,
 a:visited {
-  color: $navy;
+  color: var(--blue-jay-color);
   text-decoration: none;
 }
 
@@ -155,7 +155,7 @@ a:hover {
 }
 
 .hr {
-  background: $gray-3;
+  background: var(--gray-stone-color);
   width: 50px;
   height: 2px;
   display: block;
@@ -196,7 +196,7 @@ small,
 
 /* Contextual colors */
 .text-muted {
- color: $gray-4;
+ color: var(--gray-smoke-color);
 }
 
 /* Lists
@@ -237,10 +237,10 @@ table {
   margin-bottom: 32px;
 }
 thead {
-  border-bottom: 2px solid $gray-3;
+  border-bottom: 2px solid var(--gray-stone-color);
 }
 tr {
-  border-bottom: 1px solid $gray-3;
+  border-bottom: 1px solid var(--gray-stone-color);
 }
 td,
 th {
@@ -268,10 +268,6 @@ th:last-child {
    App structure and layout
    ========================================================================== */
 
-:root {
-  --margin: 8px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -293,7 +289,7 @@ app {
   width: 280px;
   height: 100vh;
   padding: 16px;
-  background: $white;
+  background: var(--sidebar-background-color);
   box-shadow: rgba(0,0,0,0.08) 0px 0px 16px 4px;
   position: fixed;
 }
@@ -355,6 +351,13 @@ app {
   flex-grow: 0;
   height: 24px;
   width: 24px;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.nav-nightmode-img {
+  height: 24px;
+  width: 24px;
   background-image: url('../images/icons/icon-20-night-mode.png');
   background-size: contain;
   cursor: pointer;
@@ -362,6 +365,14 @@ app {
   &:hover {
     background-image: url('../images/icons/icon-20-night-mode-on.png');
   }
+}
+
+input:checked + .nav-nightmode-img  {
+  height: 24px;
+  width: 24px;
+  background-image: url('../images/icons/icon-20-night-mode-on.png');
+  background-size: contain;
+  cursor: pointer;
 }
 
 .nav-notification {
@@ -423,7 +434,7 @@ app {
 
   &:hover {
     text-decoration: none;
-    background-color: $gray-xtra-light;
+    background-color: var(--gray-chalk-color);
   }
 }
 
@@ -435,7 +446,7 @@ app {
 }
 
 .nav-name {
-  color: $gray-med-dark;
+  color: var(--gray-slate-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -443,31 +454,31 @@ app {
 }
 
 .nav-active {
-  background-color: $gray-xtra-light;
+  background-color: var(--gray-chalk-color);
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $gray-xtra-light;
+    background-color: var(--gray-chalk-color);
   }
 }
 
 .nav-active > .nav-name {
-  color: $gray-dark;
+  color: var(--gray-granite-color);
 }
 
 .home > .nav-active {
-  background-color: $light-navy;
+  background-color: $light-blue-jay;
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $light-navy;
+    background-color: $light-blue-jay;
   }
 }
 
 .home > .nav-active > .nav-name {
-  color: $dark-navy;
+  color: $dark-blue-jay;
 }
 
 .browse > .nav-active {
@@ -544,7 +555,7 @@ app {
 .nav-section-header {
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: $gray-medium;
+  color: var(--gray-smoke-color);
   font-weight: 500;
   font-size: 12px;
   line-height: 20px;
@@ -558,7 +569,7 @@ app {
    ========================================================================== */
 
 .tabs {
-  border-bottom: 1px solid $gray-border;
+  border-bottom: 1px solid var(--gray-stone-color);
   height: 40px;
   margin-bottom: 24px;
 }
@@ -566,7 +577,7 @@ app {
 .tabs > .tab-item {
   display: inline-flex;
   align-items: center;
-  color: $gray-med-dark;
+  color: var(--tab-item-color);
   font-weight: 500;
   margin-right: 24px;
   font-size: 14px;
@@ -574,17 +585,17 @@ app {
 }
 
 .tabs > .tab-item:hover {
-  color: $gray-ink;
+  color: var(--gray-granite-color);
 }
 
 .tabs > .active {
-  color: $navy;
-  border-bottom: 1px solid $navy;
+  color: var(--blue-jay-color);
+  border-bottom: 1px solid var(--blue-jay-color);
   height: 40px;
 }
 
 .tabs > .active.tab-item:hover {
-  color: $navy;
+  color: var(--blue-jay-color);
 }
 
 
@@ -595,10 +606,10 @@ app {
 
 
 .card {
-  background-color: $white;
+  background-color: var(--card-background-color);
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.08);
-  color: $gray-black;
+  box-shadow: 0 2px 4px rgba(0,0,0,.15);
+  color: var(--gray-granite-color);
   width: 484px;
   height: 128px;
   text-align: left;
@@ -633,7 +644,7 @@ app {
 .card-title > h4 {
   font-weight: 600;
   margin-bottom: 0;
-  color: $gray-dark;
+  color: var(--gray-granite-color);
   text-overflow: ellipsis;
   max-width: 256px;
   overflow: hidden;
@@ -642,7 +653,7 @@ app {
 
 .card-title > h5 {
   font-weight: 500;
-  color: $gray-medium;
+  color: var(--card-meta-data);
 }
 
 .card-author {
@@ -665,7 +676,7 @@ app {
 .card-author-name {
   font-size: 13px;
   line-height: 24px;
-  color: $gray-medium;
+  color: var(--card-meta-data);
   font-weight: 500;
 }
 
@@ -699,7 +710,7 @@ app {
 .card-progress > h5 {
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: $gray-medium;
+  color: var(--card-meta-data);
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -707,7 +718,7 @@ app {
 
 .card-last-studied > p,
 .card-progress > p {
-  color: $gray-dark;
+  color: var(--gray-granite-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
@@ -783,10 +794,10 @@ app {
 }
 
 .smart-card {
-  background-color: $white;
+  background-color: var(--white-color);
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,.08);
-  color: $gray-black;
+  color: var(--gray-granite-color);
   transition: all 200ms cubic-bezier(.02, .01, .47, 1);
   padding: 16px;
   margin-bottom: 16px;
@@ -822,12 +833,12 @@ app {
 .smart-card-title {
   font-size: 16px;
   font-weight: 500;
-  color: $gray-black;
+  color: var(--gray-granite-color);
   margin-bottom: 8px;
 }
 
 .smart-card-description {
-  color: $gray-med-dark;
+  color: var(--gray-slate-color);
   font-size: 14px;
 }
 
@@ -881,7 +892,7 @@ app {
 
 .banner-top {
   background-color: $dark-purple;
-  color: $white;
+  color: var(--white-color);
   margin-top: 48px;
   padding: 12px 24px;
   border-top-left-radius: 8px;
@@ -893,7 +904,7 @@ app {
 
 .banner-top > h4,
 .banner-top > p {
-  color: $white;
+  color: var(--white-color);
   margin-bottom: 0;
 }
 
@@ -902,7 +913,7 @@ app {
 }
 
 .banner-bottom {
-  color: $gray-dark;
+  color: var(--gray-granite-color);
   background-color: $light-purple;
   padding: 12px 24px;
   border-bottom-left-radius: 8px;
@@ -919,7 +930,7 @@ app {
   align-items: center;
   margin-top: 64px;
   font-weight: 500;
-  color: $gray-medium;
+  color: var(--gray-smoke-color);
 }
 
 .empty-state-illo > img {
@@ -931,46 +942,67 @@ app {
    ========================================================================== */
 
 a.button {
-  color: $gray-med-dark;
+  color: var(--gray-slate-color);
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  background: $white;
+  background: var(--white-color);
   border: 1px solid;
-  border-color: $gray-border;
-  border-radius: 40px;
-  padding: 9px 20px;
+  border-color: var(--gray-stone-color);
+  border-radius: 6px;
+  padding: 9px 16px;
   cursor: pointer;
   text-decoration: none;
   transition: all 150ms;
 
   &:hover {
-    background-color: $white;
-    border-color: $gray-light;
-    color: $gray-dark;
+    background-color: var(--white-color);
+    border-color: var(--gray-stone-color);
+    color: var(--gray-granite-color);
   }
 }
 
 a.button-primary {
-  background-color: $navy;
+  background-color: var(--blue-jay-color);
   border: none;
-  color: $white;
+  color: var(--white-color);
 
   &:hover {
-    background-color: $dark-navy;
-    color: $white;
+    background-color: $dark-blue-jay;
+    color: var(--white-color);
   }
 }
 
 a.button-primary-outline {
-  border-color: $light-navy;
-  color: $navy;
+  border-color: $light-blue-jay;
+  color: var(--blue-jay-color);
 
   &:hover {
-    border-color: $navy;
-    color: $dark-navy;
+    border-color: var(--blue-jay-color);
+    color: $dark-blue-jay;
   }
 }
+
+
+
+
+/* ==========================================================================
+   Theme switcher
+   ========================================================================== */
+
+.theme-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 24px;
+  cursor: pointer;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+
 
 
 /* ==========================================================================
@@ -983,7 +1015,7 @@ a.button-primary-outline {
   width: 100%;
   cursor: pointer;
   align-items: center;
-  border-top: 1px solid $gray-border;
+  border-top: 1px solid var(--sidebar-border);
   padding-top: 16px;
 }
 
@@ -1023,7 +1055,7 @@ a.button-primary-outline {
 
 
 .profile-name {
-  color: $gray-ink;
+  color: var(--gray-granite-color);
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 0;
@@ -1031,7 +1063,7 @@ a.button-primary-outline {
 }
 
 .profile-email {
-  color: $gray-medium;
+  color: var(--gray-smoke-color);
   font-size: 13px;
   font-weight: 400;
   margin-bottom: 0;

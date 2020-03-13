@@ -1,32 +1,27 @@
+
+
+
 /* Colors  -------------------*/
 
-/* Gray  -------------------*/
 $white: #ffffff;
-$gray-1: #f6f8f9; /* backgrounds */
-$gray-2: #edf1f2;
-$gray-3: #e0e6e8; /* borders */
-$gray-4: #d5dce0;
-$gray-5: #b7bfc6;
-$gray-6: #9ca6af;  /* text */
-$gray-7: #848f99; /* borders */
-$gray-8: #646f79; /* text */
-$gray-9: #222b37; /* sidebar */
-$gray-10: #151b26; /* text */
 
-
-$gray-bg: #F8F7F1;
-$gray-xtra-light: #F0F0F0;
-$gray-light: #C0CACE;
-$gray-border: #E2E7E9;
-$gray-medium: #97A5AA;
-$gray-med-dark: #657981;
-$gray-ink: #455358;
-$gray-dark: #2D3639;
+$gray-chalk: #F8FAFC;
+$gray-stone: #E6EAEF;
+$gray-smoke: #A2ABB4;
+$gray-slate: #697482;
+$gray-granite: #141719;
 $gray-black: #000000;
 
-$light-navy: #E5E8F5;
-$navy: #4257B2;
-$dark-navy: #3B4C9B;
+$night-chalk: #F8FAFC;
+$night-stone: #86909D;
+$night-smoke: #444D55;
+$night-slate: #22272B;
+$night-granite: #141719;
+
+$light-blue-jay: rgba(64,112,208,0.2);
+$blue-jay: rgba(64,112,208,1);
+$night-blue-jay: #6479D8;
+$dark-blue-jay: #2B58B0;
 
 $light-teal: #DEF7F7;
 $teal: #3CCFCF;
@@ -50,6 +45,41 @@ $light-purple: #EEE1FA;
 $dark-purple: #8327D8;
 
 $deep-purple: #363E63;
+
+
+:root {
+  --margin: 8px;
+  --white-color: $white;
+  --gray-chalk-color: $gray-chalk;
+  --gray-stone-color: $gray-stone;
+  --gray-smoke-color: $gray-smoke;
+  --gray-slate-color: $gray-slate;
+  --gray-granite-color: $gray-granite;
+  --gray-black-color: $gray-black;
+  --blue-jay-color: $blue-jay;
+  --card-background-color: $white;
+  --sidebar-background-color: $white;
+  --tab-item-color: $gray-slate;
+  --sidebar-border: $gray-stone;
+  --card-meta-data: $gray-smoke;
+}
+
+[data-theme="dark"] {
+  --white-color: $white;
+  --gray-chalk-color: $night-granite;
+  --gray-stone-color: $night-slate;
+  --gray-smoke-color: $night-smoke;
+  --gray-slate-color: $night-stone;
+  --gray-granite-color: $gray-chalk;
+  --gray-black-color: $gray-black;
+  --blue-jay-color: $night-blue-jay;
+  --card-background-color: $night-slate;
+  --sidebar-background-color: $night-slate;
+  --tab-item-color: $night-stone;
+  --sidebar-border: $night-smoke;
+  --card-meta-data: $night-stone;
+}
+
 
 
 /* Fonts  -------------------*/

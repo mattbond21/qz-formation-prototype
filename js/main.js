@@ -11,7 +11,7 @@ $("button.checkbox").click(function(){
 $(".radio").click(function(){
   if ($(this).hasClass("selected") == true){
     $(this).removeClass("selected");
-  }else{
+  } else {
     $(this).addClass("selected");
   }
 });
@@ -19,18 +19,6 @@ $(".radio").click(function(){
 $(document).ready(function() {
   $('.drawer').drawer();
 });
-
-$(function() {
-    $('ul.o-list-ui li a').on('click', function(e){
-        var $link = $(this);
-        var $parentNode = $link.parent();
-        var linkLeavesPage = $link.attr('href');
-        if (!linkLeavesPage) {
-            $parentNode.toggleClass('nav-tree-node-is-open');
-        }
-    });
-});
-
 
 // $("#card-overlay").mouseover(function() {
 // 		$(this).addClass("visible");
@@ -44,3 +32,26 @@ $(function() {
 // }, function(){
 //   $(this).removeClass('hidden');
 // });
+
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else {        document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+    }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
