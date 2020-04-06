@@ -16,7 +16,8 @@
   --gray-slate-color: #697482; /* secondary text */
   --gray-granite-color: #22272B; /* primary text */
 
-  --light-blue-jay-color: #D9E2F6;
+  --light-blue-jay-color: #ECF1FA;
+  --border-blue-jay: #C6D4F1;
   --blue-jay-color: #4070D0;
   --dark-blue-jay-color: #2B58B0;
 
@@ -43,12 +44,15 @@
 
   --deep-purple--color: #363E63;
 
+  --app-background: var(--gray-chalk-color);
   --card-background-color: var(--white-color);
-  --sidebar-background-color: var(--white-color);
+  --header-background-color: var(--white-color);
   --tab-item-color: var(--gray-slate-color);
   --sidebar-border: var(--gray-stone-color);
   --card-meta-data: var(--gray-smoke-color);
   --nav-selected-background: var(--light-blue-jay-color);
+  --logo-color: var(--blue-jay-color);
+  --mobile-nav-icon-color: var(--gray-smoke-color);
 }
 
 [data-theme="dark"] {
@@ -59,12 +63,15 @@
   --gray-granite-color: #F8FAFC; /* primary text */
   --blue-jay-color: #6479D8;
   --dark-blue-jay-color: var(--blue-jay-color);
-  --card-background-color: var(--night-slate-color);
-  --sidebar-background-color: var(--night-slate-color);
+  --card-background-color: var(--gray-stone-color);
+  --header-background-color: var(--gray-stone-color);
+  --app-background: var(--gray-chalk-color);
   --tab-item-color: var(--night-stone-color);
   --sidebar-border: var(--night-granite-color);
   --card-meta-data: var(--night-stone-color);
   --nav-selected-background: #2B3D5C;
+  --logo-color: var(--white-color);
+  --mobile-nav-icon-color: var(--gray-slate-color);
 }
 
 
