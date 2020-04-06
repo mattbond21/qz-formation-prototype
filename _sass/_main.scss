@@ -1078,6 +1078,13 @@ a.button-primary-outline {
 }
 
 
+/* ==========================================================================
+   Mobile bottom nav
+   ========================================================================== */
+
+   .mobile-bottom-nav {
+   	display: none;
+   }
 
 
 /* ==========================================================================
@@ -1155,97 +1162,90 @@ a.button-primary-outline {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
+@media only screen and (max-width: 1024px) {
+  .content-sidebar,
+  .nav-top,
+  .nav-bottom,
+  .header-right > .buttons {
+    display: none;
+  }
+  #sidebar {
+    width: 100%;
+    height: 48px;
+    padding: 10px 24px 0;
+    z-index: 100
+  }
+  .empty-sidebar {
+    width: 0;
+  }
+  .nav-logo {
+    margin: 0;
+  }
+  .main-container {
+    width: 100%;
+    padding: 0 24px;
+  }
+  .content-body {
+    max-width: 100%;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+  .header-left > h2 {
+    font-size: 24px;
+  }
+  .logo {
+    width: 75px;
+    height: 16px;
+  }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
+  .mobile-bottom-nav {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+   height: calc(48px + env(safe-area-inset-bottom));
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+   //give nav it's own compsite layer
+   will-change: transform;
+   transform: translateZ(0);
 
-@media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+   display: flex;
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+   box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+   background-color: #fff;
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+   &__item {
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 48px;
+   }
+   &__item--active > div > svg {
+     fill: var(--blue-jay-color);
+   }
+   &__item-content {
+     display: flex;
+     flex-direction: column;
+   }
+   &__item-content > svg {
+     fill: var(--gray-smoke-color);
+   }
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  .mobile-bottom-nav__item--active > .mobile-bottom-nav__item-content {
+     border-radius: 100px;
+     width: 32px;
+     height: 32px;
+     background-color: #D9E2F6;
+     align-items: center;
+     justify-content: center;
+   }
 }
