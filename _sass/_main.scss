@@ -468,87 +468,87 @@ input:checked + .nav-nightmode-img  {
 }
 
 .home > .nav-active {
-  background-color: $light-blue-jay;
+  background-color: var(--light-blue-jay-color);
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $light-blue-jay;
+    background-color: var(--light-blue-jay-color);
   }
 }
 
 .home > .nav-active > .nav-name {
-  color: $dark-blue-jay;
+  color: var(--dark-blue-jay-color);
 }
 
 .browse > .nav-active {
-  background-color: $light-teal;
+  background-color: var(--light-teal-color);
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $light-teal;
+    background-color: var(--light-teal-color);
   }
 }
 
 .browse > .nav-active > .nav-name {
-  color: $dark-teal;
+  color: var(--dark-teal-color);
 }
 
 .marketplace > .nav-active {
-  background-color: $light-coral;
+  background-color: var(--light-coral-color);
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $light-coral;
+    background-color: var(--light-coral-color);
   }
 }
 
 .marketplace > .nav-active > .nav-name {
-  color: $dark-coral;
+  color: var(--dark-coral-color);
 }
 
 .study-queue > .nav-active {
-  background-color: $light-green;
+  background-color: var(--light-green-color);
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $light-green;
+    background-color: var(--light-green-color);
   }
 }
 
 .study-queue > .nav-active > .nav-name {
-  color: $dark-green;
+  color: var(--dark-green-color);
 }
 
 .favorites > .nav-active {
-  background-color: $light-yellow;
+  background-color: var(--light-yellow-color);
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $light-yellow;
+    background-color: var(--light-yellow-color);
   }
 }
 
 .favorites > .nav-active > .nav-name {
-  color: $dark-yellow;
+  color: var(--dark-yellow-color);
 }
 
 .made-for-you > .nav-active {
-  background-color: $light-purple;
+  background-color: var(--light-purple-color);
   display: flex;
 
   &:hover {
     text-decoration: none;
-    background-color: $light-purple;
+    background-color: var(--light-purple-color);
   }
 }
 
 .made-for-you > .nav-active > .nav-name {
-  color: $dark-purple;
+  color: var(--dark-purple-color);
 }
 
 
@@ -569,7 +569,7 @@ input:checked + .nav-nightmode-img  {
    ========================================================================== */
 
 .tabs {
-  border-bottom: 1px solid var(--gray-stone-color);
+  border-bottom: 2px solid var(--gray-stone-color);
   height: 40px;
   margin-bottom: 24px;
 }
@@ -590,7 +590,7 @@ input:checked + .nav-nightmode-img  {
 
 .tabs > .active {
   color: var(--blue-jay-color);
-  border-bottom: 1px solid var(--blue-jay-color);
+  border-bottom: 2px solid var(--blue-jay-color);
   height: 40px;
 }
 
@@ -843,7 +843,7 @@ input:checked + .nav-nightmode-img  {
 }
 
 .smart-card-set-1 {
-  background: $teal url('../images/covers/card-smart-set-1.png') center bottom no-repeat;
+  background: var(--teal-color) url('../images/covers/card-smart-set-1.png') center bottom no-repeat;
   background-size: 295px;
 }
 
@@ -891,7 +891,7 @@ input:checked + .nav-nightmode-img  {
 }
 
 .banner-top {
-  background-color: $dark-purple;
+  background-color: var(--dark-purple-color);
   color: var(--white-color);
   margin-top: 48px;
   padding: 12px 24px;
@@ -914,7 +914,7 @@ input:checked + .nav-nightmode-img  {
 
 .banner-bottom {
   color: var(--gray-granite-color);
-  background-color: $light-purple;
+  background-color: var(--light-purple-color);
   padding: 12px 24px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -968,18 +968,18 @@ a.button-primary {
   color: var(--white-color);
 
   &:hover {
-    background-color: $dark-blue-jay;
+    background-color: var(--dark-blue-jay-color);
     color: var(--white-color);
   }
 }
 
 a.button-primary-outline {
-  border-color: $light-blue-jay;
+  border-color: var(--light-blue-jay-color);
   color: var(--blue-jay-color);
 
   &:hover {
     border-color: var(--blue-jay-color);
-    color: $dark-blue-jay;
+    color: var(--dark-blue-jay-color);
   }
 }
 

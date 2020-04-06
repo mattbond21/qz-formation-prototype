@@ -666,7 +666,7 @@ fieldset[disabled] a.btn {
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
   color: var(--gray-granite-color);
-  background-color: $light-teal;
+  background-color: var(--light-teal-color);
   border-color: var(--gray-stone-color);
 }
 .btn-default:active,
@@ -1109,7 +1109,7 @@ tbody.collapse.in {
   text-align: left;
   background-color: #ffffff;
   border-radius: 4px;
-  box-shadow: 0 0 0 1px rgba($gray-smoke,0.16),0 8px 16px rgba($gray-granite,0.08);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.16),0 8px 16px rgba(0,0,0,0.08);
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   transition: all 0.3s;
@@ -1901,7 +1901,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: $deep-purple;
+  background-color: var(--deep-purple-color);
 }
 .modal-backdrop.fade {
   opacity: 0;

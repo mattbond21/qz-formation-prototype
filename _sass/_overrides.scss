@@ -29,7 +29,7 @@
 .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: var(--blue-jay-color);
-  background-color: $light-blue-jay;
+  background-color: var(--light-blue-jay-color);
 }
 
 .dropup .dropdown-menu {
