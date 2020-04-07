@@ -1,47 +1,50 @@
 <nav class="mobile-bottom-nav">
   <div class="fab-create-button">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M19 13H13V19C13 19.55 12.55 20 12 20C11.45 20 11 19.55 11 19V13H5C4.45 13 4 12.55 4 12C4 11.45 4.45 11 5 11H11V5C11 4.45 11.45 4 12 4C12.55 4 13 4.45 13 5V11H19C19.55 11 20 11.45 20 12C20 12.55 19.55 13 19 13Z"/>
     </svg>
   </div>
   <div class="mobile-bottom-nav__item {% if page.title == 'Home' %}mobile-bottom-nav__item--active{% endif %}">
     <a href="{{ site.baseurl }}" class="mobile-bottom-nav__item-content home">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9375 4.42442C10.9363 4.42516 5.0625 7.91279 5.0625 7.91279C4.64257 8.16822 4.35375 8.37734 4.18182 8.70349C4.00989 9.02964 4 9.37926 4 9.86046V19.2727C4 19.6744 4.32561 20 4.72727 20H9.09091C9.49257 20 9.81818 19.6744 9.81818 19.2727V14.4477C9.81818 14.0149 10.155 13.6744 10.5909 13.6744H13.4091C13.845 13.6744 14.1818 14.0149 14.1818 14.4477V19.2727C14.1818 19.6744 14.5074 20 14.9091 20H19.2727C19.6744 20 20 19.6744 20 19.2727V9.86046C20 9.37926 19.9901 9.02964 19.8182 8.70349C19.6463 8.37734 19.3574 8.16822 18.9432 7.91279C18.9413 7.91277 13.0682 4.42442 13.0682 4.42442C12.8099 4.26876 12.4597 4.01028 12.0057 4C11.5403 4.01029 11.1901 4.26876 10.9375 4.42442Z" />
       </svg>
       <div class="mobile-bottom-nav-label">Home</div>
     </a>
   </div>
-  <div class="mobile-bottom-nav__item {% if page.title == 'Search' %}mobile-bottom-nav__item--active{% endif %}">
-    <a href="{{ site.baseurl }}" class="mobile-bottom-nav__item-content search">
-      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0217 13.7811C15.9356 12.7182 16.1226 11.5618 16.1226 10.0606C16.1226 6.71329 13.409 4 10.0613 4C6.7136 4 4 6.71329 4 10.0606C4 13.4079 6.7136 16.1212 10.0613 16.1212C11.5626 16.1212 12.6436 15.9967 13.7067 15.083L14.2576 15.655L18.2284 19.6174C18.6106 19.9988 19.2294 19.9985 19.6112 19.6167C19.9959 19.2321 19.993 18.6076 19.6048 18.2266L15.6536 14.3483L15.0217 13.7811ZM5.86502 10.0606C5.86502 7.73893 7.73936 5.8648 10.0613 5.8648C12.3833 5.8648 14.2576 7.73893 14.2576 10.0606C14.2576 12.3823 12.3833 14.2564 10.0613 14.2564C7.73936 14.2564 5.86502 12.3823 5.86502 10.0606Z"/>
-      </svg>
-      <div class="mobile-bottom-nav-label">Search</div>
-    </a>
-  </div>
-  <div class="mobile-bottom-nav__item {% if page.title == 'Create' %}mobile-bottom-nav__item--active{% endif %}">
-    <a href="{{ site.baseurl }}"class="mobile-bottom-nav__item-content create">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C11.45 7 11 7.45 11 8V11H8C7.45 11 7 11.45 7 12C7 12.55 7.45 13 8 13H11V16C11 16.55 11.45 17 12 17C12.55 17 13 16.55 13 16V13H16C16.55 13 17 12.55 17 12C17 11.45 16.55 11 16 11H13V8C13 7.45 12.55 7 12 7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"/>
-      </svg>
-      <div class="mobile-bottom-nav-label">Create</div>
-    </a>
-  </div>
   <div class="mobile-bottom-nav__item {% if page.title == 'Folders' %}mobile-bottom-nav__item--active{% endif %}">
     <a href="{{ site.baseurl }}folders" class="mobile-bottom-nav__item-content folders">
       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.59 4.59C10.21 4.21 9.7 4 9.17 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10.59 4.59Z" />
+      <path d="M9.17 6L11.17 8H20V18H4V6H9.17ZM10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z" />
       </svg>
       <div class="mobile-bottom-nav-label">Folders</div>
     </a>
   </div>
   <div class="mobile-bottom-nav__item {% if page.title == 'Classes' %}mobile-bottom-nav__item--active{% endif %}">
-    <a href="{{ site.baseurl }}classes" class="mobile-bottom-nav__item-content classes">
+    <a href="{{ site.baseurl }}classes" class="mobile-bottom-nav__item-content">
       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V18C1 18.55 1.45 19 2 19H14C14.55 19 15 18.55 15 18V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C15.05 13.06 15.06 13.08 15.07 13.09C16.21 13.92 17 15.03 17 16.5V18C17 18.35 16.93 18.69 16.82 19H22C22.55 19 23 18.55 23 18V16.5C23 14.17 18.33 13 16 13Z"/>
+      <path d="M16.6699 13.1309C18.0399 14.0609 18.9999 15.3209 18.9999 17.0009V20.0009H22.9999V17.0009C22.9999 14.8209 19.4299 13.5309 16.6699 13.1309Z"/>
+      <path d="M14.9999 12C17.2099 12 18.9999 10.21 18.9999 8C18.9999 5.79 17.2099 4 14.9999 4C14.5299 4 14.0899 4.1 13.6699 4.24C14.4999 5.27 14.9999 6.58 14.9999 8C14.9999 9.42 14.4999 10.73 13.6699 11.76C14.0899 11.9 14.5299 12 14.9999 12Z"/>
+      <path d="M9 12C11.21 12 13 10.21 13 8C13 5.79 11.21 4 9 4C6.79 4 5 5.79 5 8C5 10.21 6.79 12 9 12ZM9 6C10.1 6 11 6.9 11 8C11 9.1 10.1 10 9 10C7.9 10 7 9.1 7 8C7 6.9 7.9 6 9 6Z"/>
+      <path d="M9 13C6.33 13 1 14.34 1 17V20H17V17C17 14.34 11.67 13 9 13ZM15 18H3V17.01C3.2 16.29 6.3 15 9 15C11.7 15 14.8 16.29 15 17V18Z"/>
       </svg>
       <div class="mobile-bottom-nav-label">Classes</div>
+    </a>
+  </div>
+  <div class="mobile-bottom-nav__item {% if page.title == 'Progress' %}mobile-bottom-nav__item--active{% endif %}">
+    <a href="{{ site.baseurl }}progress"class="mobile-bottom-nav__item-content">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 17C7.45 17 7 16.55 7 16V11C7 10.45 7.45 10 8 10C8.55 10 9 10.45 9 11V16C9 16.55 8.55 17 8 17ZM12 17C11.45 17 11 16.55 11 16V8C11 7.45 11.45 7 12 7C12.55 7 13 7.45 13 8V16C13 16.55 12.55 17 12 17ZM16 17C15.45 17 15 16.55 15 16V14C15 13.45 15.45 13 16 13C16.55 13 17 13.45 17 14V16C17 16.55 16.55 17 16 17ZM18 19H6C5.45 19 5 18.55 5 18V6C5 5.45 5.45 5 6 5H18C18.55 5 19 5.45 19 6V18C19 18.55 18.55 19 18 19ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z"/>
+      </svg>
+      <div class="mobile-bottom-nav-label">Progress</div>
+    </a>
+  </div>
+  <div class="mobile-bottom-nav__item {% if page.title == 'Marketplace' %}mobile-bottom-nav__item--active{% endif %}">
+    <a href="{{ site.baseurl }}marketplace" class="mobile-bottom-nav__item-content">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.8995 8.89L20.8495 4.52C20.6295 3.62 19.8495 3 18.9395 3H5.04952C4.14952 3 3.35952 3.63 3.14952 4.52L2.09952 8.89C1.85952 9.91 2.07952 10.95 2.71952 11.77C2.79952 11.88 2.90952 11.96 2.99952 12.06V19C2.99952 20.1 3.89952 21 4.99952 21H18.9995C20.0995 21 20.9995 20.1 20.9995 19V12.06C21.0895 11.97 21.1995 11.88 21.2795 11.78C21.9195 10.96 22.1495 9.91 21.8995 8.89ZM18.9095 4.99L19.9595 9.36C20.0595 9.78 19.9695 10.2 19.7095 10.53C19.5695 10.71 19.2695 11 18.7695 11C18.1595 11 17.6295 10.51 17.5595 9.86L16.9795 5L18.9095 4.99ZM12.9995 5H14.9595L15.4995 9.52C15.5495 9.91 15.4295 10.3 15.1695 10.59C14.9495 10.85 14.6295 11 14.2195 11C13.5495 11 12.9995 10.41 12.9995 9.69V5ZM8.48952 9.52L9.03952 5H10.9995V9.69C10.9995 10.41 10.4495 11 9.70952 11C9.36952 11 9.05952 10.85 8.81952 10.59C8.56952 10.3 8.44952 9.91 8.48952 9.52ZM4.03952 9.36L5.04952 5H7.01952L6.43952 9.86C6.35952 10.51 5.83952 11 5.22952 11C4.73952 11 4.42952 10.71 4.29952 10.53C4.02952 10.21 3.93952 9.78 4.03952 9.36ZM4.99952 19V12.97C5.07952 12.98 5.14952 13 5.22952 13C6.09952 13 6.88952 12.64 7.46952 12.05C8.06952 12.65 8.86952 13 9.77952 13C10.6495 13 11.4295 12.64 12.0095 12.07C12.5995 12.64 13.3995 13 14.2995 13C15.1395 13 15.9395 12.65 16.5395 12.05C17.1195 12.64 17.9095 13 18.7795 13C18.8595 13 18.9295 12.98 19.0095 12.97V19H4.99952Z" />
+      </svg>
+      <div class="mobile-bottom-nav-label">Marketplace</div>
     </a>
   </div>
 </nav>

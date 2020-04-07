@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Home
-tab: Recent
+title: Classes
+tab: Members
 ---
 
 <div class="content-wrapper">
@@ -10,9 +10,14 @@ tab: Recent
       <div class="header-left">
         <h2>{{ page.title }}</h2>
       </div>
+      <div class="header-right">
+        <div class="buttons">
+          <a class="button button-small">Create class</a>
+        </div>
+      </div>
     </header>
 
-    {% include home-nav.html %}
+    {% include classes-nav.html %}
 
     {% include content-cards.html %}
 

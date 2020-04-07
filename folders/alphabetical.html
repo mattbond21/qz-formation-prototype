@@ -1,0 +1,24 @@
+---
+layout: default
+title: Folders
+tab: Alphabetical
+---
+
+<div class="content-wrapper">
+  <div class="content-body">
+    <header class="page-header">
+      <div class="header-left">
+        <h2>{{ page.title }}</h2>
+      </div>
+      <div class="header-right">
+        <div class="buttons">
+          <a class="button button-small">Create folder</a>
+        </div>
+      </div>
+    </header>
+
+    {% include folders-nav.html %}
+
+    {% include content-folders.html %}
+
+</div>

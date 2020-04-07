@@ -50,9 +50,11 @@
   --tab-item-color: var(--gray-slate-color);
   --sidebar-border: var(--gray-stone-color);
   --card-meta-data: var(--gray-smoke-color);
+  --border-color: var(--gray-stone-color);
   --nav-selected-background: var(--light-blue-jay-color);
   --logo-color: var(--blue-jay-color);
   --mobile-nav-icon-color: var(--gray-smoke-color);
+  --placeholder-images: var(--gray-stone-color);
 }
 
 [data-theme="dark"] {
@@ -66,12 +68,14 @@
   --card-background-color: var(--gray-stone-color);
   --header-background-color: var(--gray-stone-color);
   --app-background: var(--gray-chalk-color);
-  --tab-item-color: var(--night-stone-color);
+  --tab-item-color: var(--gray-slate-color);
   --sidebar-border: var(--night-granite-color);
-  --card-meta-data: var(--night-stone-color);
+  --card-meta-data: var(--gray-slate-color);
+  --border-color: var(--gray-chalk-color);
   --nav-selected-background: #2B3D5C;
   --logo-color: var(--white-color);
   --mobile-nav-icon-color: var(--gray-slate-color);
+  --placeholder-images: var(--gray-smoke-color);
 }
 
 
