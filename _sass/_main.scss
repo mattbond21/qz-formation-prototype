@@ -1143,7 +1143,7 @@ a.button-primary-outline {
   .fab-create-button {
     display: flex;
     position: absolute;
-    bottom: calc(64px + safe-area-inset-bottom);
+    bottom: calc(64px + env(safe-area-inset-bottom));
     right: 16px;
     width: 48px;
     height: 48px;
