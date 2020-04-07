@@ -1082,43 +1082,43 @@ a.button-primary-outline {
   }
 
   .mobile-bottom-nav {
-   position: fixed;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 1000;
-   height: calc(48px + env(safe-area-inset-bottom));
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: calc(48px + env(safe-area-inset-bottom));
 
-   //give nav it's own compsite layer
-   will-change: transform;
-   transform: translateZ(0);
+    //give nav it's own compsite layer
+    will-change: transform;
+    transform: translateZ(0);
 
-   display: flex;
+    display: flex;
 
-   box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
-   background-color: var(--header-background-color);
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    background-color: var(--header-background-color);
 
-   &__item {
+    &__item {
      flex-grow: 1;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
      height: 48px;
-   }
-   &__item--active > a {
+    }
+    &__item--active > a {
      color: var(--blue-jay-color);
-   }
-   &__item--active > a > svg {
+    }
+    &__item--active > a > svg {
      fill: var(--blue-jay-color);
-   }
-   &__item-content {
+    }
+    &__item-content {
      display: flex;
      flex-direction: row;
-   }
-   &__item-content > svg {
+    }
+    &__item-content > svg {
      fill: var(--mobile-nav-icon-color);
-   }
+    }
   }
 
   .mobile-bottom-nav-label {
@@ -1135,51 +1135,50 @@ a.button-primary-outline {
      align-items: center;
      justify-content: center;
    }
-   .mobile-bottom-nav__item--active > .mobile-bottom-nav__item-content {
-      background-color: var(--nav-selected-background);
-    }
 
-    .fab-create-button {
-      display: flex;
-      position: absolute;
-      bottom: 64px;
-      right: 16px;
-      width: 48px;
-      height: 48px;
-      border-radius: 64px;
-      fill: var(--app-background);
-      background: var(--blue-jay-color);
-      box-shadow: 0 1px 8px 2px rgba(0,0,0,0.2);
+  .mobile-bottom-nav__item--active > .mobile-bottom-nav__item-content {
+    background-color: var(--nav-selected-background);
+  }
 
-      & svg {
-        height: 24px;
-        width: 24px;
-        align-self: center;
-        flex: auto;
-      }
-    }
+  .fab-create-button {
+    display: flex;
+    position: absolute;
+    bottom: calc(64px + safe-area-inset-bottom);
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 64px;
+    fill: var(--app-background);
+    background: var(--blue-jay-color);
+    box-shadow: 0 1px 8px 2px rgba(0,0,0,0.2);
 
-    .tabs {
-      background: var(--header-background-color);
-      width: 100%;
-      position: fixed;
-      left: 0;
-      top: 48px;
-      display: flex;
-      padding: 0 24px;
-      border-bottom: none;
-      box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.08);
-      flex-direction: row;
-      justify-content: space-around;
-      z-index: 100;
-    }
-    .tabs > .tab-item {
-      margin-right: 0;
+    & svg {
+      height: 24px;
+      width: 24px;
+      align-self: center;
       flex: auto;
-      justify-content: space-around;
     }
+  }
 
-
+  .tabs {
+    background: var(--header-background-color);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 48px;
+    display: flex;
+    padding: 0 24px;
+    border-bottom: none;
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.08);
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 100;
+  }
+  .tabs > .tab-item {
+    margin-right: 0;
+    flex: auto;
+    justify-content: space-around;
+  }
 }
 
 @media screen and (max-width: 676px) {
