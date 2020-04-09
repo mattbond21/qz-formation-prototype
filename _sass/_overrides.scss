@@ -41,6 +41,16 @@
   visibility: visible;
 }
 
+.search-form > .form-control {
+  border-color: transparent;
+  background: var(--gray-chalk-color);
+  box-shadow: none;
+  padding-left: 40px;
+  font-weight: 500;
+  color: var(--gray-smoke-color);
+  border-radius: 6px;
+}
+
 
 @media (min-width: 768px) {
 

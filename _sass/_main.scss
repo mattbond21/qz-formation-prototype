@@ -325,12 +325,12 @@ app {
 
 .nav-right {
   display: flex;
-  flex: 0;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .nav-right > a.button {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .nav-logo {
@@ -340,7 +340,7 @@ app {
 
 .nav-logo > a {
   order: 1;
-  flex-grow: 1;
+  flex-grow: 0;
 }
 
 .nav-bar {
@@ -843,14 +843,14 @@ a.button {
 }
 
 a.button-small {
-  line-height: 17px;
+  line-height: 15px;
   padding: 7px 16px;
   height: 32px;
 }
 
 a.button-primary {
   background-color: var(--blue-jay-color);
-  border: none;
+  border-color: transparent;
   color: var(--white-color);
 
   &:hover {
@@ -869,6 +869,20 @@ a.button-primary-outline {
   }
 }
 
+.search-icon {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  left: 32px;
+  width: 24px;
+  height: 24px;
+  fill: var(--gray-smoke-color);
+}
+
+form.search-form {
+  width: 220px;
+  margin-right: 8px;
+}
 
 
 
@@ -1017,13 +1031,14 @@ a.button-primary-outline {
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1160px) {
   .nav-top,
   .nav-bottom,
   .header-right > .buttons,
   .nav-bar,
-  .nav-right > .button,
-  .page-header {
+  .nav-right > .button-primary,
+  .page-header,
+  form.search-form {
     display: none;
   }
 
@@ -1036,17 +1051,30 @@ a.button-primary-outline {
     box-shadow: none;
     z-index: 200;
   }
-  .empty-sidebar {
-    width: 0;
+
+  .nav-right {
+    flex-grow: 0;
+    width: 33.333%;
   }
+
   .nav-logo {
     margin-top: -8px;
+    flex-grow: 0;
+    width: 33.333%;
   }
 
   .content-sidebar-300 {
    margin-left: 32px;
   }
 
+  .nav-right > a.button {
+    margin-right: 16px;
+  }
+
+  span.search-icon {
+    left: 0;
+    margin-right: 16px;
+  }
 
   .mobile-nav-title {
     display: flex;
@@ -1205,12 +1233,13 @@ a.button-primary-outline {
 }
 
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
 
   .page-header,
   .logo,
   .mobile-bottom-nav-label,
-  .content-sidebar-160 {
+  .content-sidebar-160,
+  .nav-logo {
     display: none;
   }
 
@@ -1218,6 +1247,11 @@ a.button-primary-outline {
   .tabs,
   .main-container {
     padding: 0 16px;
+  }
+
+  a.button-small {
+    height: 28px;
+    padding: 5px 12px;
   }
 
   .tabs > .tab-item {
@@ -1230,7 +1264,7 @@ a.button-primary-outline {
   }
 
   .mobile-nav-title > h4 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .profile-avatar {
