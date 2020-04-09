@@ -55,6 +55,8 @@
   --logo-color: var(--blue-jay-color);
   --mobile-nav-icon-color: var(--gray-smoke-color);
   --placeholder-images: var(--gray-stone-color);
+  --secondary-button-background-color: var(--white-color);
+  --secondary-button-border-color: var(--border-blue-jay);
 }
 
 [data-theme="dark"] {
@@ -76,6 +78,8 @@
   --logo-color: var(--white-color);
   --mobile-nav-icon-color: var(--gray-slate-color);
   --placeholder-images: var(--gray-smoke-color);
+  --secondary-button-background-color: var(--nav-selected-background);
+  --secondary-button-border-color: var(--nav-selected-background);
 }
 
 

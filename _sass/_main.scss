@@ -825,9 +825,9 @@ a.button {
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  background: var(--white-color);
+  background: var(--secondary-button-background-color);
   border: 1px solid;
-  border-color: var(--border-blue-jay);
+  border-color: var(--secondary-button-border-color);
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
   padding: 9px 16px;
@@ -872,11 +872,22 @@ a.button-primary-outline {
 .search-icon {
   display: inline-block;
   position: relative;
-  top: -2px;
-  left: 32px;
+  margin-right: 8px;
+  background: var(--app-background);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  color: var(--tab-item-color);
+  fill: var(--tab-item-color);
+}
+
+.search-icon > a > svg {
+  position: relative;
   width: 24px;
   height: 24px;
-  fill: var(--gray-smoke-color);
+  left: 4px;
+  top: 2px;
+  fill: var(--tab-item-color);
 }
 
 form.search-form {
@@ -1121,7 +1132,7 @@ form.search-form {
     left: 0;
     right: 0;
     z-index: 1000;
-    height: calc(48px + env(safe-area-inset-bottom));
+    height: calc(56px + env(safe-area-inset-bottom));
 
     //give nav it's own compsite layer
     will-change: transform;
@@ -1138,7 +1149,7 @@ form.search-form {
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     height: 48px;
+     height: 56px;
     }
     &__item--active > a {
      color: var(--blue-jay-color);
@@ -1177,14 +1188,14 @@ form.search-form {
   .fab-create-button {
     display: flex;
     position: absolute;
-    bottom: calc(64px + env(safe-area-inset-bottom));
+    bottom: calc(72px + env(safe-area-inset-bottom));
     right: 16px;
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     border-radius: 64px;
     fill: var(--app-background);
     background: var(--blue-jay-color);
-    box-shadow: 0 1px 8px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 12px 1px rgba(0,0,0,0.4);
 
     & svg {
       height: 24px;
@@ -1247,6 +1258,10 @@ form.search-form {
   .tabs,
   .main-container {
     padding: 0 16px;
+  }
+
+  .nav-right {
+    width: 50%;
   }
 
   a.button-small {
