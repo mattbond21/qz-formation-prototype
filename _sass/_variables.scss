@@ -10,16 +10,16 @@
   --xxlarge-spacing: 64px;
 
   --white-color: #ffffff;
-  --gray-chalk-color: #F4F7FA; /* canvas background */
-  --gray-stone-color: #E6EAEF; /* borders */
-  --gray-smoke-color: #A2ABB4; /* incidental text and icons */
-  --gray-slate-color: #697482; /* secondary text */
-  --gray-granite-color: #22272B; /* primary text */
+  --gray-chalk-color: #F6F9FB; /* canvas background */
+  --gray-stone-color: #DEE0E8; /* borders */
+  --gray-smoke-color: #B7BCCD; /* incidental text and icons */
+  --gray-slate-color: #66697F; /* secondary text */
+  --gray-granite-color: #303545; /* primary text */
 
   --light-blue-jay-color: #ECF1FA;
   --border-blue-jay: #C6D4F1;
-  --blue-jay-color: #4070D0;
-  --dark-blue-jay-color: #2B58B0;
+  --blue-jay-color: #3F6FD0;
+  --dark-blue-jay-color: #2D5BB8;
 
   --light-teal-color: #DEF7F7;
   --teal-color: #3CCFCF;
@@ -60,12 +60,12 @@
 }
 
 [data-theme="dark"] {
-  --gray-chalk-color: #141719; /* canvas background */
-  --gray-stone-color: #22272B; /* header and card backgrounds */
+  --gray-chalk-color: #111218; /* canvas background */
+  --gray-stone-color: #212530; /* header and card backgrounds */
   --gray-smoke-color: #444D55; /* incidental text and icons */
-  --gray-slate-color: #86909D; /* secondary text */
-  --gray-granite-color: #F4F7FA; /* primary text */
-  --blue-jay-color: #6479D8;
+  --gray-slate-color: #6C7698; /* secondary text */
+  --gray-granite-color: #F6F9FB; /* primary text */
+  --blue-jay-color: #6B89D6;
   --dark-blue-jay-color: var(--blue-jay-color);
   --card-background-color: var(--gray-stone-color);
   --header-background-color: var(--gray-stone-color);
