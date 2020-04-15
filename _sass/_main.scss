@@ -307,7 +307,7 @@ app {
 }
 
 .main-container {
-  width: 85%;
+  width: 1280px;
   margin: 112px auto 48px auto;
 }
 
@@ -1041,6 +1041,12 @@ form.search-form {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media only screen and (max-width: 1380px) {
+ .main-container {
+   width: calc(100% - 96px);
+ }
+}
 
 @media only screen and (max-width: 1024px) {
   .nav-top,
