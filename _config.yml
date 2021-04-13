@@ -10,5 +10,5 @@ sass:
 # Setup
 title:            Quizlet app rethink
 tagline:          'Formation Prototype'
-url:              http://quizlet.github.io/formation-prototype/
-baseurl:          /formation-prototype/
+url:              http://mattbond21.github.io/qz-formation-prototype/
+baseurl:          /qz-formation-prototype/
